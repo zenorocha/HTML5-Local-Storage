@@ -30,9 +30,11 @@
 
 <body>
 
-<div id="wrapper">
+  <div id="wrapper">
+  	
     <header>
 		<h1>To-do List</h1>
+		<a href="#">voltar ao tutorial</a>
     </header>
     
     <section id="tutorial">
@@ -55,7 +57,7 @@
 	    
 	</section>
 	
-	<section id="abc">
+	<section>
 	    
 	    <section id="categoria"></section>
 	    
@@ -94,18 +96,26 @@
 
 	$(function() {
 	  
-	  $("#lista").keypress(function(event){
-	    localStorage.setItem('dados', $("#lista").html());
-	  });
+		if (Modernizr.localstorage) {
+		  	  
+			$("#lista").keypress(function(event){
+			    localStorage.setItem('dados', $("#lista").html());
+			});
+			  
+			if (localStorage.getItem('dados') ) {
+				$("#lista").html(localStorage.getItem('dados'));
+			}
+			  
+			$("#limpar").click(function() {
+			    localStorage.clear();
+			    window.location = window.location;
+			});
+			
+		} 
+		else {
+			alert ("Seu browser não tem suporte a API Storage");
+		}
 	  
-	  if (localStorage.getItem('dados') ) {
-	  	$("#lista").html(localStorage.getItem('dados'));
-	  }
-	  
-	  $("#limpar").click(function() {
-	    localStorage.clear();
-	    window.location = window.location;
-	  });
 	  
 	});
 

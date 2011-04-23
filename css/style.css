@@ -72,8 +72,8 @@ button {  width: auto; overflow: visible; }
 body, select, input, textarea { color: #444; }
 h1, h2, h3, h4, h5, h6 { font-weight: bold; font-family: "LeagueGothicRegular";	text-transform:uppercase;}
 
-a, a:active, a:visited { color: #F14A29; }
-a:hover { color: #F14A29; }
+a, a:active, a:visited { color: #F14A29; text-decoration: none; }
+a:hover { color: #F14A29; text-decoration: underline; }
 
 /**
  *
@@ -139,24 +139,41 @@ section, article, aside {
 	margin: 0 auto;
 	padding: 40px 0 0 0;
 	width: 1000px;
+	height: 920px;
 }
 
 /* --- Header --- */
 
 header {
-	background:none repeat scroll 0 0 #0092BF;
+	background: #0092BF;
 	clear:both;
 	width:1000px;
+	height: 70px;
+	padding: 30px 0;
 }
 
 header h1 {
 	color:#FFFFFF;
-	font-size:80px;
+	font-size: 80px;
 	font-weight:bold;
-	line-height:140px;
-	margin:0 36px;
 	text-transform:uppercase;
+	margin: 0 30px;
 }
+
+header a {
+	color: #fff;
+	font-size: 18px;
+	float: right;
+	text-decoration: none;
+	margin: -28px 15px 15px;
+}
+
+header a:hover {
+	text-decoration: underline;
+	color: #fff;
+}
+
+
 
 /* --- Caixa Esquerda #1 --- */
 
@@ -267,6 +284,18 @@ footer h6  {
 
 /* --- Conteúdo - Footer --- */
 
+footer a {
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+footer a:hover {
+	color: #fff;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
 .autor {
 	margin:15px;
 	padding-top: 20px;
@@ -274,22 +303,10 @@ footer h6  {
 	color: #fff;
 }
 
-.autor a {
-	color: #fff;
-	font-weight: bold;
-	text-decoration: none;
-}
-
 .referencia {
 	font-size: 16px;
 	color: #fff;
 	margin: 0px 15px 15px;
-}
-
-.referencia a {
-	color: #fff;
-	font-weight: bold;
-	text-decoration: none;
 }
 
 /* --- Media --- */
