@@ -98,11 +98,11 @@
 	  
 		if (Modernizr.localstorage) {
 		  	  
-			$("#lista").keypress(function(event){
+			$("#lista").keypress(function() {
 			    localStorage.setItem('dados', $("#lista").html());
 			});
 			  
-			if (localStorage.getItem('dados') ) {
+			if (localStorage.getItem('dados')) {
 				$("#lista").html(localStorage.getItem('dados'));
 			}
 			  

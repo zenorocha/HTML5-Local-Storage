@@ -72,8 +72,8 @@ button {  width: auto; overflow: visible; }
 body, select, input, textarea { color: #444; }
 h1, h2, h3, h4, h5, h6 { font-weight: bold; font-family: "LeagueGothicRegular";	text-transform:uppercase;}
 
-a, a:active, a:visited { color: #F14A29; text-decoration: none; }
-a:hover { color: #F14A29; text-decoration: underline; }
+a { color: #F14A29; text-decoration: none; }
+a:hover { text-decoration: underline; }
 
 /**
  *
